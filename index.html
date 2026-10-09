@@ -1,11 +1,260 @@
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Wavelengths · Álbuns que me formaram</title>
-	</head>
-	<body>
-		<!-- O conteúdo da página começa na etapa 01 -->
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wavelengths · Álbuns que me formaram</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-header__title">Wavelengths</h1>
+      <p class="site-header__subtitle">Dez álbuns que me formaram, do mais antigo ao mais recente.</p>
+
+      <nav class="album-nav" aria-label="Álbuns">
+        <ol class="album-nav__list">
+          <li><a href="#linkin-park-hybrid-theory">Hybrid Theory</a></li>
+          <li><a href="#linkin-park-meteora">Meteora</a></li>
+          <li><a href="#blink-182-self-titled">blink-182</a></li>
+          <li><a href="#panic-at-the-disco-a-fever-you-cant-sweat-out">A Fever You Can't Sweat Out</a></li>
+          <li><a href="#twenty-one-pilots-vessel">Vessel</a></li>
+          <li><a href="#paramore-self-titled">Paramore</a></li>
+          <li><a href="#taylor-swift-1989">1989</a></li>
+          <li><a href="#twenty-one-pilots-blurryface">Blurryface</a></li>
+          <li><a href="#bring-me-the-horizon-thats-the-spirit">That's the Spirit</a></li>
+          <li><a href="#sleep-token-even-in-arcadia">Even in Arcadia</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Um álbum por seção. Os nomes dos campos seguem o futuro albums.json da Fase 2 -->
+      <section class="album" id="linkin-park-hybrid-theory" aria-labelledby="linkin-park-hybrid-theory-title">
+        <h2 class="album__title" id="linkin-park-hybrid-theory-title">Hybrid Theory</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Linkin Park</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2000">2000</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Angústia</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>O álbum inteiro</dd>
+        </dl>
+        <p class="album__meaning">A estreia que misturou rap, metal e eletrônica sem pedir licença. Fala de insegurança, de perder o controle sobre a própria cabeça e da dor que ninguém de fora enxerga.</p>
+      </section>
+
+      <section class="album" id="linkin-park-meteora" aria-labelledby="linkin-park-meteora-title">
+        <h2 class="album__title" id="linkin-park-meteora-title">Meteora</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Linkin Park</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2003">2003</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Pressão</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <p>O álbum inteiro e, da edição de 20 anos:</p>
+            <ul class="album__tracks">
+              <li>Lost</li>
+              <li>Fighting Myself</li>
+              <li>More the Victim</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">A continuação que lapida o som do primeiro disco. Fala do peso das expectativas de quem está por perto, do cansaço de tentar caber no molde dos outros e da vontade de ser quem se é.</p>
+      </section>
+
+      <section class="album" id="blink-182-self-titled" aria-labelledby="blink-182-self-titled-title">
+        <h2 class="album__title" id="blink-182-self-titled-title">blink-182</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>blink-182</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2003">2003</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Saudade</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>Stockholm Syndrome</li>
+              <li>Down</li>
+              <li>Always</li>
+              <li>I Miss You</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">O disco em que a banda das piadas cresceu. Mais sombrio e experimental, troca a zoeira por saudade, distância e relacionamentos que insistem mesmo no escuro.</p>
+      </section>
+
+      <section class="album" id="panic-at-the-disco-a-fever-you-cant-sweat-out" aria-labelledby="panic-at-the-disco-a-fever-you-cant-sweat-out-title">
+        <h2 class="album__title" id="panic-at-the-disco-a-fever-you-cant-sweat-out-title">A Fever You Can't Sweat Out</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Panic! at the Disco</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2005">2005</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Ironia</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>Camisado</li>
+              <li>But It's Better If You Do</li>
+              <li>Lying Is the Most Fun a Girl Can Have Without Taking Her Clothes Off</li>
+              <li>Time to Dance</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">Uma estreia teatral, com metade eletrônica e metade cabaré. Por trás do clima de festa, fala de hipocrisia, de aparências e até do alcoolismo na família, sempre com sarcasmo e exagero de palco.</p>
+      </section>
+
+      <section class="album" id="twenty-one-pilots-vessel" aria-labelledby="twenty-one-pilots-vessel-title">
+        <h2 class="album__title" id="twenty-one-pilots-vessel-title">Vessel</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Twenty One Pilots</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2013">2013</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Introspecção</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>Car Radio</li>
+              <li>Trees</li>
+              <li>Holding On to You</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">Fé, dúvida e saúde mental, ditos de forma direta. É um disco sobre encarar os próprios pensamentos no silêncio e lutar contra os que tentam te derrubar.</p>
+      </section>
+
+      <section class="album" id="paramore-self-titled" aria-labelledby="paramore-self-titled-title">
+        <h2 class="album__title" id="paramore-self-titled-title">Paramore</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Paramore</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2013">2013</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Esperança</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>Part II</li>
+              <li>Last Hope</li>
+              <li>Daydreaming</li>
+              <li>Ain't It Fun</li>
+              <li>Still Into You</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">Gravado depois da saída de dois integrantes, é a banda se reinventando como trio. Fala de resiliência, de pequenas doses de esperança nos dias difíceis e de seguir em frente quando o plano muda.</p>
+      </section>
+
+      <section class="album" id="taylor-swift-1989" aria-labelledby="taylor-swift-1989-title">
+        <h2 class="album__title" id="taylor-swift-1989-title">1989</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Taylor Swift</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2014">2014</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Liberdade</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>New Romantics</li>
+              <li>Now That We Don't Talk</li>
+              <li>Wildest Dreams</li>
+              <li>Shake It Off</li>
+              <li>Out of the Woods</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">A virada definitiva para o pop, inspirada no synth-pop dos anos 80. Fala de independência, de relacionamentos instáveis e de rir da imagem que os outros criam de você.</p>
+      </section>
+
+      <section class="album" id="twenty-one-pilots-blurryface" aria-labelledby="twenty-one-pilots-blurryface-title">
+        <h2 class="album__title" id="twenty-one-pilots-blurryface-title">Blurryface</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Twenty One Pilots</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2015">2015</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Ansiedade</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>Heavydirtysoul</li>
+              <li>Doubt</li>
+              <li>Lane Boy</li>
+              <li>The Judge</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">Um álbum conceitual sobre Blurryface, o personagem que dá corpo às inseguranças de Tyler Joseph. Fala de ansiedade, de pressão e de encarar o que te trava.</p>
+      </section>
+
+      <section class="album" id="bring-me-the-horizon-thats-the-spirit" aria-labelledby="bring-me-the-horizon-thats-the-spirit-title">
+        <h2 class="album__title" id="bring-me-the-horizon-thats-the-spirit-title">That's the Spirit</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Bring Me the Horizon</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2015">2015</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Catarse</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>Doomed</li>
+              <li>Happy Song</li>
+              <li>Follow You</li>
+              <li>What You Need</li>
+              <li>Avalanche</li>
+              <li>Drown</li>
+              <li>Oh No</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">A passagem do metalcore para um rock de arena mais melódico. Fala de depressão, vícios e autossabotagem sem rodeios, e transforma esse peso em refrão para cantar junto.</p>
+      </section>
+
+      <section class="album" id="sleep-token-even-in-arcadia" aria-labelledby="sleep-token-even-in-arcadia-title">
+        <h2 class="album__title" id="sleep-token-even-in-arcadia-title">Even in Arcadia</h2>
+        <dl class="album__details">
+          <dt>Artista</dt>
+          <dd>Sleep Token</dd>
+          <dt>Ano</dt>
+          <dd><time datetime="2025">2025</time></dd>
+          <dt>Sentimento</dt>
+          <dd>Devoção</dd>
+          <dt>Faixas favoritas</dt>
+          <dd>
+            <ul class="album__tracks">
+              <li>Look to Windward</li>
+              <li>Caramel</li>
+              <li>Even in Arcadia</li>
+              <li>Gethsemane</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="album__meaning">Continua a mitologia de devoção da banda e olha para dentro: uma luta contra a escuridão, dividida entre redenção e autodestruição, que soa como um pedido de ajuda.</p>
+      </section>
+
+      <aside class="honorable-mention" aria-labelledby="honorable-mention-title">
+        <h2 class="honorable-mention__title" id="honorable-mention-title">Menção honrosa</h2>
+        <p><cite>Breach</cite>, Twenty One Pilots (<time datetime="2025">2025</time>): o capítulo que liberta Clancy das muralhas de Dema e encerra a história contada desde <cite>Trench</cite>.</p>
+        <p>Faixas favoritas: City Walls, RAWFEAR, The Contract, Robot Voices, One Way e Tally.</p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p>Projeto de aula feito só com HTML e CSS. Finalidade educacional.</p>
+      <p><a href="https://github.com/RenanFerreira02/wavelengths">Código no GitHub</a></p>
+    </footer>
+  </body>
 </html>

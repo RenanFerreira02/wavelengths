@@ -4,7 +4,7 @@ Landing page com os álbuns que me formaram, feita só com HTML e CSS, etapa por
 
 ## Demo
 
-_Em breve: o deploy na Vercel entra a partir da `etapa-01`._
+_Em breve em `wavelengths.vercel.app`._
 
 ## Como rodar
 
@@ -29,6 +29,7 @@ git switch main               # volta para a versão final
 | Tag        | Etapa            | Conceito      |
 | ---------- | ---------------- | ------------- |
 | `etapa-00` | Ponto de partida | Projeto vazio |
+| `etapa-01` | Estrutura semântica | HTML semântico |
 
 ## Decisões técnicas
 

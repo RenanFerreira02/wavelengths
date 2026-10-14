@@ -155,10 +155,73 @@ nav {
     font-size: 24px;
   }
 
+  /* Palco do carrossel 3D. perspective é a distância do olho até a cena:
+     quanto menor, mais forte o efeito de profundidade. */
   .hero-covers {
+    perspective: 1000px;
+  }
+
+  /* O carrossel: as capas ficam em volta de um eixo e o conjunto gira */
+  .carousel {
     display: grid;
-    grid-template-columns: repeat(8, 120px);
-    gap: 16px;
+    /* Os filhos mantêm a posição em 3D, em vez de serem achatados no plano */
+    transform-style: preserve-3d;
+    animation: spin 24s linear infinite;
+
+    /* As oito capas na mesma célula do grid, uma sobre a outra */
+    img {
+      grid-area: 1 / 1;
+    }
+
+    /* :nth-child(n) escolhe a capa pela posição.
+       Cada uma gira 45° a mais (360° ÷ 8) e depois anda 240px para fora do centro. */
+    img:nth-child(1) {
+      transform: rotateY(0deg) translateZ(240px);
+    }
+
+    img:nth-child(2) {
+      transform: rotateY(45deg) translateZ(240px);
+    }
+
+    img:nth-child(3) {
+      transform: rotateY(90deg) translateZ(240px);
+    }
+
+    img:nth-child(4) {
+      transform: rotateY(135deg) translateZ(240px);
+    }
+
+    img:nth-child(5) {
+      transform: rotateY(180deg) translateZ(240px);
+    }
+
+    img:nth-child(6) {
+      transform: rotateY(225deg) translateZ(240px);
+    }
+
+    img:nth-child(7) {
+      transform: rotateY(270deg) translateZ(240px);
+    }
+
+    img:nth-child(8) {
+      transform: rotateY(315deg) translateZ(240px);
+    }
+
+    /* Quem pede menos movimento no sistema vê o carrossel parado */
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+}
+
+/* Uma volta completa no eixo vertical (Y) */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
   }
 }
 

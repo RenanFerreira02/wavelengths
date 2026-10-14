@@ -23,6 +23,7 @@ Para ver a página como ela estava em uma etapa, use `git log --oneline` e depoi
 - `10-grid`: layout do hero e de cada álbum, com a capa alternando de lado.
 - `11-css-nesting`: o `style.css` reescrito com CSS nesting nativo.
 - `12-transition`: hover e foco do cabeçalho mudam aos poucos com `transition`.
+- `13-keyframes`: o hero vira um carrossel 3D girando com `@keyframes`, parado para quem prefere menos movimento.
 
 ## Navegadores
 

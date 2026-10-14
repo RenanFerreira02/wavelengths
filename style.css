@@ -239,3 +239,44 @@ nav ul {
   padding: 0;
   list-style-position: inside;
 }
+
+/* Grid: o pai define colunas e linhas, e os filhos se encaixam nelas */
+
+/* Hero: uma coluna só, com tudo centralizado na horizontal e na vertical */
+#hero {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 24px;
+}
+
+/* As oito capas do hero em oito colunas de 120px */
+.hero-covers {
+  display: grid;
+  grid-template-columns: repeat(8, 120px);
+  gap: 16px;
+}
+
+/* Álbum: capa de 440px numa coluna e o texto no espaço que sobra (1fr).
+   grid-template-areas dá nome às colunas: "cover" (capa) à esquerda, "info" (texto) à direita. */
+.album {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  grid-template-areas: "cover info";
+  gap: 80px;
+  align-items: center;
+}
+
+/* Nos álbuns pares os lados se invertem: basta trocar a ordem das áreas */
+.album-reverse {
+  grid-template-columns: 1fr 440px;
+  grid-template-areas: "info cover";
+}
+
+.album img {
+  grid-area: cover;
+}
+
+.album-info {
+  grid-area: info;
+}

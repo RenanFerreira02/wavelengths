@@ -12,7 +12,20 @@ Para ver a página como ela estava em uma etapa, use `git log --oneline` e depoi
 
 - `00-ponto-de-partida`: esqueleto do documento HTML.
 - `01-estrutura-semantica`: header, nav, main, sections, footer e o conteúdo dos álbuns.
+- `02-imagens`: capas com `img`, `alt`, `width` e `height`.
 
+## Créditos das capas
+
+As capas ficam na pasta `covers/`, em baixa resolução (500 × 500 px), só para fins educacionais. Os direitos pertencem aos artistas e às gravadoras. As imagens vêm do [Cover Art Archive](https://coverartarchive.org/), via MusicBrainz.
+
+- `hybrid-theory.jpg`: *Hybrid Theory* (2000), Linkin Park. Gravadora: Warner Bros. Records.
+- `meteora.jpg`: *Meteora* (2003), Linkin Park. Gravadora: Warner Bros. Records.
+- `blink-182.jpg`: *blink-182* (2003), blink-182. Gravadora: Geffen Records.
+- `a-fever-you-cant-sweat-out.jpg`: *A Fever You Can’t Sweat Out* (2005), Panic! at the Disco. Gravadoras: Decaydance e Fueled by Ramen.
+- `riot.jpg`: *Riot!* (2007), Paramore. Gravadora: Fueled by Ramen.
+- `brand-new-eyes.jpg`: *Brand New Eyes* (2009), Paramore. Gravadora: Fueled by Ramen.
+- `paramore.jpg`: *Paramore* (2013), Paramore. Gravadora: Fueled by Ramen.
+- `thats-the-spirit.jpg`: *That’s the Spirit* (2015), Bring Me the Horizon. Gravadora: RCA Records (Sony Music).
 ## Licença
 
 Código sob a licença MIT. Veja o arquivo [LICENSE](LICENSE).

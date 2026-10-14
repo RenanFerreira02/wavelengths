@@ -45,3 +45,27 @@ summary:focus-visible {
   outline: 2px solid;
   outline-offset: 4px;
 }
+
+/* Herança: cor, fonte e altura de linha do body passam para todos os filhos */
+body {
+  background-color: #111111;
+  color: #F5F1E8;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+/* Links não herdam a cor: o estilo do navegador pinta de azul.
+   O valor inherit manda o link usar a cor do elemento pai. */
+a {
+  color: inherit;
+}
+
+/* Cascata: as duas regras abaixo atingem o <p class="hero-subtitle">.
+   A de classe vence a de tag porque é mais específica, mesmo vindo antes. */
+.hero-subtitle {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}

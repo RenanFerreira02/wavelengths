@@ -1,0 +1,30 @@
+/* Seletor de tag: vale para todos os <h2> (os nomes dos álbuns) */
+h2 {
+  text-transform: uppercase;
+}
+
+/* Seletor de classe: só os elementos com class="logo" */
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* Seletor de classe: todas as listas de gêneros */
+.album-genres {
+  list-style: none;
+}
+
+/* Seletor de id: o único elemento com id="hero" */
+#hero {
+  text-align: center;
+}
+
+/* Seletor descendente: só os links que estão dentro do header */
+header a {
+  text-decoration: none;
+}
+
+/* Seletor descendente: só as listas que estão dentro do nav */
+nav ul {
+  list-style: none;
+}

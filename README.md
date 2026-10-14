@@ -16,6 +16,7 @@ Para ver a página como ela estava em uma etapa, use `git log --oneline` e depoi
 - `03-seletores`: `style.css` com seletores de tag, classe, id e descendente.
 - `04-pseudo-classes`: `:hover` e `:focus-visible`.
 - `05-cascata-e-heranca`: herança a partir do `body`, `inherit` e especificidade.
+- `06-box-model`: `margin`, `padding`, `border` e `box-sizing`.
 
 ## Créditos das capas
 

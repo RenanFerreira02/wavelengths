@@ -97,13 +97,18 @@ header {
   padding: 24px 64px;
   border-bottom: 1px solid #2A2A2A;
 
-  /* Aninhado, vira header a */
+  /* Aninhado, vira header a.
+     O sublinhado existe desde o início, só que transparente:
+     assim a cor dele pode mudar aos poucos com transition. */
   a {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 
-    /* Aninhado de novo, vira header a:hover */
-    &:hover {
-      text-decoration: underline;
+    /* Aninhado de novo, vira header a:hover. O foco pelo teclado ganha o mesmo efeito. */
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: currentColor;
     }
   }
 }
@@ -127,7 +132,8 @@ nav {
     color: #CFC8BA;
     font-weight: 500;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: #F5F1E8;
     }
   }

@@ -98,12 +98,9 @@ footer {
   border-top: 1px solid #2A2A2A;
 }
 
-/* Etiquetas de gênero em forma de pílula.
-   inline-block fica na mesma linha, mas respeita padding e margin. */
+/* Etiquetas de gênero em forma de pílula */
 .album-genres li {
-  display: inline-block;
   padding: 4px 14px;
-  margin-right: 8px;
   border: 1px solid #2A2A2A;
   border-radius: 999px;
   color: #CFC8BA;
@@ -213,4 +210,32 @@ footer p {
 .album-mood li::marker,
 .album-favorite strong {
   color: var(--color-accent);
+}
+
+/* Flexbox: o pai com display: flex alinha os filhos em linha */
+
+/* Logo à esquerda, menu à direita, os dois centralizados na vertical */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* gap é o espaço entre os itens, sem margin em cada um */
+nav ul {
+  display: flex;
+  gap: 32px;
+}
+
+.album-genres {
+  display: flex;
+  gap: 8px;
+}
+
+/* Em linha, a bolinha precisa ficar dentro do item (inside) */
+.album-mood {
+  display: flex;
+  gap: 24px;
+  padding: 0;
+  list-style-position: inside;
 }

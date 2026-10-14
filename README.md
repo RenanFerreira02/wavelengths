@@ -19,6 +19,7 @@ Para ver a página como ela estava em uma etapa, use `git log --oneline` e depoi
 - `06-box-model`: `margin`, `padding`, `border` e `box-sizing`.
 - `07-cores-e-tipografia`: paleta com contraste conferido e fontes do Google Fonts.
 - `08-variaveis-css`: `--color-accent` próprio de cada álbum.
+- `09-flexbox`: header, menu, etiquetas de gênero e clima do álbum em linha.
 
 ## Créditos das capas
 

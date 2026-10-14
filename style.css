@@ -1,117 +1,49 @@
-/* Box model: com border-box, width e height já incluem padding e borda */
+/* Wavelengths · estilos da página
+
+   Este arquivo usa CSS nesting nativo: a regra de um filho fica dentro
+   do bloco do pai, e o & representa o seletor do pai.
+   Suporte: Chrome 120+, Firefox 117+ e Safari 17.2+.
+   Navegadores mais antigos ignoram as regras aninhadas. */
+
+
+/* Base */
+
+/* Com border-box, width e height já incluem padding e borda */
 * {
   box-sizing: border-box;
 }
 
-/* Seletor de tag: vale para todos os <h2> (os nomes dos álbuns) */
-h2 {
-  text-transform: uppercase;
-}
-
-/* Seletor de classe: só os elementos com class="logo" */
-.logo {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
-/* Seletor de classe: todas as listas de gêneros */
-.album-genres {
-  list-style: none;
-  padding: 0;
-}
-
-/* Seletor de id: o único elemento com id="hero" */
-#hero {
-  text-align: center;
-  height: 760px;
-  padding: 64px;
-}
-
-/* Seletor descendente: só os links que estão dentro do header */
-header a {
-  text-decoration: none;
-}
-
-/* Seletor descendente: só as listas que estão dentro do nav */
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Pseudo-classe :hover: vale enquanto o mouse está em cima do elemento */
-header a:hover {
-  text-decoration: underline;
-}
-
-/* O summary é clicável, então a seta do mouse vira a mãozinha */
-summary:hover {
-  cursor: pointer;
-}
-
-/* Pseudo-classe :focus-visible: contorno quando se navega pelo teclado (Tab) */
-a:focus-visible,
-summary:focus-visible {
-  outline: 2px solid;
-  outline-offset: 4px;
-}
-
-/* Herança: cor, fonte e altura de linha do body passam para todos os filhos */
+/* Cor, fonte e altura de linha do body são herdadas por todos os filhos */
 body {
+  margin: 0;
   background-color: #111111;
   color: #F5F1E8;
   font-family: "DM Sans", sans-serif;
   line-height: 1.6;
-  margin: 0; /* tira a margem que o navegador põe em volta da página */
-}
-
-/* Links não herdam a cor: o estilo do navegador pinta de azul.
-   O valor inherit manda o link usar a cor do elemento pai. */
-a {
-  color: inherit;
-}
-
-/* Cascata: as duas regras abaixo atingem o <p class="hero-subtitle">.
-   A de classe vence a de tag porque é mais específica, mesmo vindo antes. */
-.hero-subtitle {
-  font-size: 24px;
-}
-
-p {
-  font-size: 18px;
-  color: #CFC8BA;
-}
-
-/* Box model: conteúdo, padding (dentro da borda), border e margin (fora) */
-header {
-  padding: 24px 64px;
-  border-bottom: 1px solid #2A2A2A;
-}
-
-.album {
-  padding: 96px 64px;
-  border-top: 1px solid #2A2A2A;
-}
-
-footer {
-  padding: 48px 64px;
-  border-top: 1px solid #2A2A2A;
-}
-
-/* Etiquetas de gênero em forma de pílula */
-.album-genres li {
-  padding: 4px 14px;
-  border: 1px solid #2A2A2A;
-  border-radius: 999px;
-  color: #CFC8BA;
-  font-size: 14px;
 }
 
 /* Paleta sobre o fundo #111111 (contraste medido pela WCAG, mínimo 4,5:1):
    texto #F5F1E8 (16,8:1), secundário #CFC8BA (11,4:1),
    terciário #A39C8E (6,9:1) e bordas #2A2A2A (só decoração). */
 
-/* Tipografia: Syne nos títulos, DM Sans no texto (carregadas no head) */
+p {
+  font-size: 18px;
+  color: #CFC8BA;
+}
+
+/* Links não herdam a cor; inherit manda usar a cor do pai */
+a {
+  color: inherit;
+}
+
+/* Contorno para quem navega pelo teclado (Tab) */
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid;
+  outline-offset: 4px;
+}
+
+/* Syne nos títulos, DM Sans no texto (carregadas no head) */
 h1,
 h2,
 .logo,
@@ -129,31 +61,21 @@ h2 {
   font-size: 56px;
   font-weight: 800;
   line-height: 1.1;
-}
-
-.logo {
-  font-weight: 800;
-}
-
-.album-number {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--color-accent);
+  text-transform: uppercase;
 }
 
 /* A DM Sans foi carregada só nos pesos 400 e 500 */
-strong,
+strong {
+  font-weight: 500;
+}
+
 summary {
   font-weight: 500;
-}
 
-nav a {
-  color: #CFC8BA;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: #F5F1E8;
+  /* &:hover vira summary:hover */
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 /* Rótulos pequenos em cinza mais claro */
@@ -165,13 +87,79 @@ nav a:hover {
   letter-spacing: 0.15em;
 }
 
-footer p {
-  color: #A39C8E;
-  font-size: 14px;
+
+/* Cabeçalho */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  border-bottom: 1px solid #2A2A2A;
+
+  /* Aninhado, vira header a */
+  a {
+    text-decoration: none;
+
+    /* Aninhado de novo, vira header a:hover */
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-/* Variáveis CSS: cada álbum guarda a própria cor de destaque.
-   O nome começa com dois hífens e o valor é lido com var().
+.logo {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+nav {
+  ul {
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: #CFC8BA;
+    font-weight: 500;
+
+    &:hover {
+      color: #F5F1E8;
+    }
+  }
+}
+
+
+/* Abertura */
+
+#hero {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 24px;
+  height: 760px;
+  padding: 64px;
+  text-align: center;
+
+  .hero-subtitle {
+    font-size: 24px;
+  }
+
+  .hero-covers {
+    display: grid;
+    grid-template-columns: repeat(8, 120px);
+    gap: 16px;
+  }
+}
+
+
+/* Álbuns */
+
+/* Cada álbum guarda a própria cor de destaque numa variável.
    Contraste com o fundo: 13,1:1, 10,1:1, 7,9:1, 13,7:1, 7,2:1, 10,2:1, 9,3:1 e 8,4:1. */
 #album-01 {
   --color-accent: #FFD166;
@@ -205,78 +193,78 @@ footer p {
   --color-accent: #F28FAD;
 }
 
-/* A variável é herdada pelos filhos: uma regra serve para todos os álbuns.
-   ::marker é a bolinha da lista. */
-.album-mood li::marker,
-.album-favorite strong {
-  color: var(--color-accent);
-}
-
-/* Flexbox: o pai com display: flex alinha os filhos em linha */
-
-/* Logo à esquerda, menu à direita, os dois centralizados na vertical */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* gap é o espaço entre os itens, sem margin em cada um */
-nav ul {
-  display: flex;
-  gap: 32px;
-}
-
-.album-genres {
-  display: flex;
-  gap: 8px;
-}
-
-/* Em linha, a bolinha precisa ficar dentro do item (inside) */
-.album-mood {
-  display: flex;
-  gap: 24px;
-  padding: 0;
-  list-style-position: inside;
-}
-
-/* Grid: o pai define colunas e linhas, e os filhos se encaixam nelas */
-
-/* Hero: uma coluna só, com tudo centralizado na horizontal e na vertical */
-#hero {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  gap: 24px;
-}
-
-/* As oito capas do hero em oito colunas de 120px */
-.hero-covers {
-  display: grid;
-  grid-template-columns: repeat(8, 120px);
-  gap: 16px;
-}
-
-/* Álbum: capa de 440px numa coluna e o texto no espaço que sobra (1fr).
-   grid-template-areas dá nome às colunas: "cover" (capa) à esquerda, "info" (texto) à direita. */
+/* Capa de 440px numa coluna e o texto no espaço que sobra (1fr) */
 .album {
   display: grid;
   grid-template-columns: 440px 1fr;
   grid-template-areas: "cover info";
   gap: 80px;
   align-items: center;
+  padding: 96px 64px;
+  border-top: 1px solid #2A2A2A;
+
+  /* Sem espaço depois do &: vira .album.album-reverse (as duas classes no mesmo elemento) */
+  &.album-reverse {
+    grid-template-columns: 1fr 440px;
+    grid-template-areas: "info cover";
+  }
+
+  img {
+    grid-area: cover;
+  }
+
+  .album-info {
+    grid-area: info;
+  }
+
+  .album-number {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  /* Etiquetas de gênero em forma de pílula */
+  .album-genres {
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 4px 14px;
+      border: 1px solid #2A2A2A;
+      border-radius: 999px;
+      color: #CFC8BA;
+      font-size: 14px;
+    }
+  }
+
+  /* Clima do álbum: bolinhas na cor de destaque */
+  .album-mood {
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    list-style-position: inside;
+
+    li::marker {
+      color: var(--color-accent);
+    }
+  }
+
+  .album-favorite strong {
+    color: var(--color-accent);
+  }
 }
 
-/* Nos álbuns pares os lados se invertem: basta trocar a ordem das áreas */
-.album-reverse {
-  grid-template-columns: 1fr 440px;
-  grid-template-areas: "info cover";
-}
 
-.album img {
-  grid-area: cover;
-}
+/* Rodapé */
 
-.album-info {
-  grid-area: info;
+footer {
+  padding: 48px 64px;
+  border-top: 1px solid #2A2A2A;
+
+  p {
+    color: #A39C8E;
+    font-size: 14px;
+  }
 }

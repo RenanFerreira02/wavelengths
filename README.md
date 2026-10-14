@@ -21,6 +21,11 @@ Para ver a página como ela estava em uma etapa, use `git log --oneline` e depoi
 - `08-variaveis-css`: `--color-accent` próprio de cada álbum.
 - `09-flexbox`: header, menu, etiquetas de gênero e clima do álbum em linha.
 - `10-grid`: layout do hero e de cada álbum, com a capa alternando de lado.
+- `11-css-nesting`: o `style.css` reescrito com CSS nesting nativo.
+
+## Navegadores
+
+A partir da etapa `11-css-nesting`, o `style.css` usa CSS nesting nativo, suportado no Chrome 120+, Firefox 117+ e Safari 17.2+. Em navegadores mais antigos, as regras aninhadas são ignoradas e a página perde parte do estilo.
 
 ## Créditos das capas
 

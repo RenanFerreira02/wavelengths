@@ -60,7 +60,7 @@ summary:focus-visible {
 body {
   background-color: #111111;
   color: #F5F1E8;
-  font-family: sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.6;
   margin: 0; /* tira a margem que o navegador põe em volta da página */
 }
@@ -79,22 +79,23 @@ a {
 
 p {
   font-size: 18px;
+  color: #CFC8BA;
 }
 
 /* Box model: conteúdo, padding (dentro da borda), border e margin (fora) */
 header {
   padding: 24px 64px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #2A2A2A;
 }
 
 .album {
   padding: 96px 64px;
-  border-top: 1px solid;
+  border-top: 1px solid #2A2A2A;
 }
 
 footer {
   padding: 48px 64px;
-  border-top: 1px solid;
+  border-top: 1px solid #2A2A2A;
 }
 
 /* Etiquetas de gênero em forma de pílula.
@@ -103,6 +104,70 @@ footer {
   display: inline-block;
   padding: 4px 14px;
   margin-right: 8px;
-  border: 1px solid;
+  border: 1px solid #2A2A2A;
   border-radius: 999px;
+  color: #CFC8BA;
+  font-size: 14px;
+}
+
+/* Paleta sobre o fundo #111111 (contraste medido pela WCAG, mínimo 4,5:1):
+   texto #F5F1E8 (16,8:1), secundário #CFC8BA (11,4:1),
+   terciário #A39C8E (6,9:1) e bordas #2A2A2A (só decoração). */
+
+/* Tipografia: Syne nos títulos, DM Sans no texto (carregadas no head) */
+h1,
+h2,
+.logo,
+.album-number {
+  font-family: "Syne", sans-serif;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.logo {
+  font-weight: 800;
+}
+
+.album-number {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* A DM Sans foi carregada só nos pesos 400 e 500 */
+strong,
+summary {
+  font-weight: 500;
+}
+
+nav a {
+  color: #CFC8BA;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #F5F1E8;
+}
+
+/* Rótulos pequenos em cinza mais claro */
+.hero-hint,
+.album-label {
+  color: #A39C8E;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+footer p {
+  color: #A39C8E;
+  font-size: 14px;
 }

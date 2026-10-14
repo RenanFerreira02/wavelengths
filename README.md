@@ -14,6 +14,7 @@ Para ver a página como ela estava em uma etapa, use `git log --oneline` e depoi
 - `01-estrutura-semantica`: header, nav, main, sections, footer e o conteúdo dos álbuns.
 - `02-imagens`: capas com `img`, `alt`, `width` e `height`.
 - `03-seletores`: `style.css` com seletores de tag, classe, id e descendente.
+- `04-pseudo-classes`: `:hover` e `:focus-visible`.
 
 ## Créditos das capas
 

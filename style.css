@@ -28,3 +28,20 @@ header a {
 nav ul {
   list-style: none;
 }
+
+/* Pseudo-classe :hover: vale enquanto o mouse está em cima do elemento */
+header a:hover {
+  text-decoration: underline;
+}
+
+/* O summary é clicável, então a seta do mouse vira a mãozinha */
+summary:hover {
+  cursor: pointer;
+}
+
+/* Pseudo-classe :focus-visible: contorno quando se navega pelo teclado (Tab) */
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid;
+  outline-offset: 4px;
+}

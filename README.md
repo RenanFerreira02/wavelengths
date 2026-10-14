@@ -11,6 +11,7 @@ Para ver a página como ela estava em uma etapa, use `git log --oneline` e depoi
 ## Etapas
 
 - `00-ponto-de-partida`: esqueleto do documento HTML.
+- `01-estrutura-semantica`: header, nav, main, sections, footer e o conteúdo dos álbuns.
 
 ## Licença
 

@@ -2,6 +2,12 @@
 
 Página de estudo da Fase 1 do portfólio (HTML + CSS). Ela apresenta álbuns que marcaram minha formação e é construída etapa por etapa, um conceito por commit, para ser usada em aula.
 
+## No ar
+
+[wavelengths-renanferreira-dev.vercel.app](https://wavelengths-renanferreira-dev.vercel.app)
+
+![Print da página Wavelengths em tela de 1280 px](screenshot.png)
+
 ## Como abrir
 
 Não precisa instalar nada: abra o arquivo `index.html` no navegador.
